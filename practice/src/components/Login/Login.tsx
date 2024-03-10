@@ -8,6 +8,7 @@ useEffect(()=> {
 userData()
 },[])
 const userData = async () =>{
+  // run json-server first npx json-server -p 8080 -w database/data.json
     const res = await axios.get("http://localhost:8080/user");
     setUser(res.data)
 }
